@@ -1,10 +1,10 @@
+"use client";
+
 // This code defines a React functional component called 'Container' that serves as a wrapper for its children.
 // It takes a single prop called 'children', which represents the content that will be rendered inside the component.
 // The component renders a <div> element and places the 'children' prop within it, effectively wrapping the content.
 // The 'Container' component can be used to provide a consistent layout or styling to its child components.
 // The component is exported as the default export, allowing it to be imported and used in other parts of the application.
-
-"use client";
 
 interface ContainerProps {
   children: React.ReactNode;

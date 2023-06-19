@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div className="text-rose-500 text-2xl">Roomie</div>;
+  return <div className="text-normal-blue text-2xl">Roomie</div>;
 }
