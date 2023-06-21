@@ -124,7 +124,7 @@ const Modal: React.FC<ModalProps> = ({
                 w-full
                 bg-white
                 outline-none
-                focus:outlne-none
+                focus:outline-none
             "
             >
               {/* Header */}
@@ -133,7 +133,7 @@ const Modal: React.FC<ModalProps> = ({
                   flex
                   items-center
                   p-6
-                  rounded-1
+                  rounded-t
                   justify-center
                   relative
                   border-b-[1px]
@@ -203,6 +203,7 @@ const Modal: React.FC<ModalProps> = ({
                     onClick={handleSubmit}
                   />
                 </div>
+                {footer}
               </div>
             </div>
           </div>
