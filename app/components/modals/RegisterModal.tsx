@@ -5,12 +5,15 @@ import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+// Can also written as ../../app/hooks/useRegisterModal
 import useRegisterModal from "@/app/hooks/useRegisterModal";
+import Modal from "./Modal";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
   const [isLoading, setIsLoading] = useState(false);
 
+  // Form control
   const {
     register,
     handleSubmit,
@@ -23,6 +26,31 @@ const RegisterModal = () => {
     },
   });
 
-  return <div className=""></div>;
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    setIsLoading(true);
+
+    axios
+      .post("/api/register", data)
+      .then(() => {
+        registerModal.onClose();
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
+  return (
+    <Modal
+      disabled={isLoading}
+      isOpen={registerModal.isOpen}
+      title="Register"
+      actionLabel="Continue"
+      onClose={registerModal.onClose}
+      onSubmit={handleSubmit(onSubmit)}
+    />
+  );
 };
 export default RegisterModal;
