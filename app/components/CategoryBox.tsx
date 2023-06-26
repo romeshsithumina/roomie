@@ -6,8 +6,8 @@ import { IconType } from "react-icons";
 import qs from "query-string";
 
 interface CategoryBoxProps {
-  icon: IconType | undefined;
-  label: string | undefined;
+  icon: IconType;
+  label: string;
   selected?: boolean;
 }
 
@@ -66,7 +66,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
 
     `}
     >
-      {Icon ? <Icon size={26} /> : null}
+      <Icon size={26} />
       <div className="font-medium text-sm">{label}</div>
     </div>
   );
