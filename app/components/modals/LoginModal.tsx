@@ -20,8 +20,10 @@ import { useRouter } from "next/navigation";
 
 const LoginModal = () => {
   const router = useRouter();
+
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
+
   const [isLoading, setIsLoading] = useState(false);
 
   // Form control
@@ -56,6 +58,12 @@ const LoginModal = () => {
       }
     });
   };
+
+  // toggling login and register modal
+  const toggle = useCallback(() => {
+    loginModal.onClose();
+    registerModal.onOpen();
+  }, [loginModal, registerModal]);
 
   const bodyContent = (
     <div
@@ -108,16 +116,16 @@ const LoginModal = () => {
       "
       >
         <div className="justify-center flex flex-row items-center gap-2">
-          <div>Already have an account?</div>
+          <div>First time using Roomie?</div>
           <div
-            onClick={registerModal.onClose}
+            onClick={toggle}
             className="
             text-neutral-800
             cursor-pointer
             hover:underline
           "
           >
-            Login
+            Create an account
           </div>
         </div>
       </div>
