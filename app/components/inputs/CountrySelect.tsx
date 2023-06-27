@@ -47,7 +47,7 @@ const CountrySelect: React.FC<CountrySelectProps> = ({ value, onChange }) => {
           borderRadius: 6,
           colors: {
             ...theme.colors,
-            primary: "balck",
+            primary: "black",
             primary25: "#d6e4ff",
           },
         })}
