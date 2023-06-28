@@ -5,6 +5,7 @@ const nextConfig = {
       "lh3.googleusercontent.com",
       "scontent.fcmb1-2.fna.fbcdn.net",
       "platform-lookaside.fbsbx.com",
+      "res.cloudinary.com",
     ],
   },
 };
