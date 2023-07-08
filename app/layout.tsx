@@ -14,7 +14,7 @@ const font = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Roomie",
-  description: "Roomie: A new way to reserve rooms",
+  description: "Roomie: Find your perfect place.",
 };
 
 export default async function RootLayout({
