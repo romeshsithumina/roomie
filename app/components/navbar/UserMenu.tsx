@@ -92,6 +92,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
       </div>
       {isOpen && (
         <div
+          onMouseLeave={toggleOpen}
           className="
             absolute
             rounded-xl
